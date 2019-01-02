@@ -1,2 +1,2 @@
 # rotor
-Spark-based analysis engine supporting XQL for big data processing.
+Spark-based analysis engine supporting XQL for Ad-Hoc query.
