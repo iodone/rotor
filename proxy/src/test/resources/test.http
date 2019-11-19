@@ -1,0 +1,47 @@
+POST /api/v1/rql/submit HTTP/1.1
+Host: 127.0.0.1:9002
+Content-Type: application/json
+
+{
+    "rql":"load hive.`hive_cc_8102` as hive_test0;select * from hive_test0 as t0;select * from t0 where hash = \"0008BBB7A2F056BEED48BE89BD4CDD75\" as t1;",
+    "name": "test0"
+}
+
+###
+POST /api/v1/rql/job/submit HTTP/1.1
+Host: 127.0.0.1:9002
+Content-Type: application/json
+
+{
+    "rql":"select * from dm_user_package_carbon where imei = \"865240047723701\" as t1;",
+    "name": "test1"
+}
+
+###
+POST /api/v1/rql/job/discribe HTTP/1.1
+Host: 127.0.0.1:9002
+Content-Type: application/json
+
+{
+    "id": "4190d7c3-1ed5-4971-953a-d289abaa73ff"
+}
+
+###
+POST /api/v1/rql/job/cancel HTTP/1.1
+Host: 127.0.0.1:9002
+Content-Type: application/json
+
+{
+    "id": "372ae1e4-fef9-4367-bb84-333985a15a9d"
+}
+
+###
+POST /api/v1/monitor/engine/describe HTTP/1.1
+Host: 127.0.0.1:9002
+Content-Type: application/json
+
+{
+    "address": "192.168.65.165:30000"
+}
+
+###
